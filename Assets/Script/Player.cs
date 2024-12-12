@@ -66,21 +66,8 @@ public class Player : MonoBehaviour
 
             transform.position = Vector3.Lerp(PlayerPosition, TwoDimensionTouch, Time.deltaTime * PlayerSpeed);
 
-            if (Volume < 1)
-            {
-                Volume = Volume + 0.1f * Time.deltaTime;
-            }
         }
 
-        else
-        {
-            if (Volume > 0.1)
-            {
-                Volume = Volume - 0.1f * Time.deltaTime;
-            }
-        }
-
-        AudioSource.volume = Volume;
     }
 
     void OnCollisionStay2D(Collision2D collision)
